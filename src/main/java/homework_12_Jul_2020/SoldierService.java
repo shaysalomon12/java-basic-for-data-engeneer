@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class SoldierService {
 
-    // Create ArrayList of soldiers
+    // Create ArrayList of soldierss
     private ArrayList<Soldier> soldiers = new ArrayList<Soldier>();
     private Soldier soldier;
 
