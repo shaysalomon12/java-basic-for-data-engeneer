@@ -1,7 +1,7 @@
 package homework_12_Jul_2020;
 
 import java.util.Objects;
-//aa
+
 public class Soldier {
     private String soldierName;
     private int soldierAge;

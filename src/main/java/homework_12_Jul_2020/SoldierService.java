@@ -1,7 +1,7 @@
 package homework_12_Jul_2020;
 
 import java.util.ArrayList;
-//aa
+
 public class SoldierService {
 
     // Create ArrayList of soldierss
