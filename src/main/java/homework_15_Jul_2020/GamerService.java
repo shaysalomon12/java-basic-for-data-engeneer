@@ -23,12 +23,19 @@ public class GamerService {
         int maxAll = 0;
         int i = 0;
 
-        for (i = 0; i < gamers.size(); i++)
-            if (maxAll < gamers.get(i).getGamerScore()) {
-                maxAll = gamers.get(i).getGamerScore();
-            }
+        //for (i = 0; i < gamers.size(); i++)
+        //    if (maxAll < gamers.get(i).getGamerScore()) {
+        //        maxAll = gamers.get(i).getGamerScore();
+        //    }
 
+        // New-style for loop
+        for (Gamer element : gamers) {
+            if (maxAll < element.getGamerScore()) {
+                maxAll = element.getGamerScore();
+            }
+        }
         return maxAll;
+
     }
 
     // Return max score name result
@@ -37,11 +44,19 @@ public class GamerService {
         int i = 0;
         String gamerName = "";
 
-        for (i = 0; i < gamers.size(); i++)
-            if (maxAll < gamers.get(i).getGamerScore()) {
-                maxAll = gamers.get(i).getGamerScore();
-                gamerName = gamers.get(i).getGamerName();
+        //for (i = 0; i < gamers.size(); i++)
+        //    if (maxAll < gamers.get(i).getGamerScore()) {
+        //        maxAll = gamers.get(i).getGamerScore();
+        //        gamerName = gamers.get(i).getGamerName();
+        //    }
+
+        // New-style for loop
+        for (Gamer element : gamers) {
+            if (maxAll < element.getGamerScore()) {
+                maxAll = element.getGamerScore();
+                gamerName = element.getGamerName();
             }
+        }
 
         return gamerName;
     }
