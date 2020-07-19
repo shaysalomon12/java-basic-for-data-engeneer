@@ -18,7 +18,7 @@ public class GuessGame {
         int answer = 0;
         int numOfTries = 0;
 
-        System.out.println(x);
+        // System.out.println(x); // For debug
 
         // Show gamer name
         JOptionPane.showMessageDialog(null, name + " is playing");
