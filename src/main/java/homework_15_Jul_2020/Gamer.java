@@ -13,8 +13,8 @@ public class Gamer {
 
     // Method to add new gamer
     public void newGamer(String name1, int score1){
-        name1 = gamerName;
-        score1 = gamerScore;
+        // name1 = gamerName;
+        // score1 = gamerScore;
         System.out.println("New gamer added with name " + name1 + " and score " + score1);
     }
 
