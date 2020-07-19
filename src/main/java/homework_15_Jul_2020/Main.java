@@ -15,7 +15,7 @@ public class Main {
         GuessGame game = new GuessGame();
         GamerService service = new GamerService();
 
-        // Create the gamers
+        // Create the gamers and run the GuessGame for each
         gamerName = "Dan";
         Gamer gamer0 = new Gamer (gamerName, game.play(100, gamerName));
         service.addGamer(gamer0);
