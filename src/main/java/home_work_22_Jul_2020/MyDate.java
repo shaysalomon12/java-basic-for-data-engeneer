@@ -4,6 +4,7 @@ import java.math.BigInteger;
 
 public class MyDate {
 
+    private String date;
     private String year;
     private String month;
     private String day;
@@ -13,18 +14,12 @@ public class MyDate {
 
     // Constructor that verifay date end return epoch (number of seconds since 01/01/1970
     public MyDate(String date1) {
-
-        // Verify mm/dd/yyyy format
-        //dateRegex = "^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\\d\\d$";
-        //a = verifyDate(date1);
-        //if (a < 0 ){
-        //    System.out.println("Not a Valid date !!!");
-        //}
+        this.date = date1;
     }
 
     // Verify this is a valid date
     public Integer verifyDate(String date) {
-        // mm/dd/yyyy format
+
         String dateRegex = "^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\\d\\d$";
         if (date.matches(dateRegex)) {
             // convert to epoch
@@ -33,8 +28,8 @@ public class MyDate {
             int d = Integer.parseInt(epoch1[1]);
             int y = Integer.parseInt(epoch1[2]);
             a = this.epoch(d, m, y);
-            System.out.println(d + " " + m + " " + y);
-            System.out.println("Epoch a = " + a);
+            // System.out.println(d + " " + m + " " + y);
+            // System.out.println("Epoch a = " + a);
             return a;
         }
 
@@ -46,7 +41,7 @@ public class MyDate {
             int d = Integer.parseInt(epoch1[0]);
             int m = Integer.parseInt(epoch1[1]);
             int y = Integer.parseInt(epoch1[2]);
-            System.out.println(d + " " + m + " " + y);
+            // System.out.println(d + " " + m + " " + y);
             a = epoch(d, m, y);
             return a;
         }
@@ -59,7 +54,7 @@ public class MyDate {
             int y = Integer.parseInt(epoch1[0]);
             int m = Integer.parseInt(epoch1[1]);
             int d = Integer.parseInt(epoch1[2]);
-            System.out.println(d + " " + m + " " + y);
+            // System.out.println(d + " " + m + " " + y);
             a = epoch(d, m, y);
             return a;
         }
@@ -76,6 +71,30 @@ public class MyDate {
         // System.out.println("Verify calc: " + dayM + " " + monthM + " " +  yearM);
         return ((day * dayM) + (month * monthM) + (year * yearM));
 
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public int getEpoch() {
+        return epoch;
+    }
+
+    public void setEpoch(int epoch) {
+        this.epoch = epoch;
+    }
+
+    public Integer getA() {
+        return a;
+    }
+
+    public void setA(Integer a) {
+        this.a = a;
     }
 
     // Getter and Setter
