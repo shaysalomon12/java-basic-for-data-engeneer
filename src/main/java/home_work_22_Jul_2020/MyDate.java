@@ -2,7 +2,7 @@ package home_work_22_Jul_2020;
 
 import java.math.BigInteger;
 
-public class Date {
+public class MyDate {
 
     private String year;
     private String month;
@@ -12,14 +12,14 @@ public class Date {
     private Integer a = 0;
 
     // Constructor that verifay date end return epoch (number of seconds since 01/01/1970
-    public Date(String date1) {
+    public MyDate(String date1) {
 
         // Verify mm/dd/yyyy format
         //dateRegex = "^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\\d\\d$";
-        a = verifyDate(date1);
-        if (a < 0 ){
-            System.out.println("Not a Valid date !!!");
-        }
+        //a = verifyDate(date1);
+        //if (a < 0 ){
+        //    System.out.println("Not a Valid date !!!");
+        //}
     }
 
     // Verify this is a valid date
