@@ -8,6 +8,7 @@ public class MyDate {
     private String year;
     private String month;
     private String day;
+    private String dateRegex;
     // private String dateRegex = null;
     private int epoch = 0;
     private Integer a = 0;
@@ -20,7 +21,8 @@ public class MyDate {
     // Verify this is a valid date
     public Integer verifyDate(String date) {
 
-        String dateRegex = "^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\\d\\d$";
+        // mm/dd/yyyy format
+        dateRegex = "^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\\d\\d$";
         if (date.matches(dateRegex)) {
             // convert to epoch
             String[] epoch1 = date.split("/");
@@ -28,8 +30,6 @@ public class MyDate {
             int d = Integer.parseInt(epoch1[1]);
             int y = Integer.parseInt(epoch1[2]);
             a = this.epoch(d, m, y);
-            // System.out.println(d + " " + m + " " + y);
-            // System.out.println("Epoch a = " + a);
             return a;
         }
 
@@ -41,7 +41,6 @@ public class MyDate {
             int d = Integer.parseInt(epoch1[0]);
             int m = Integer.parseInt(epoch1[1]);
             int y = Integer.parseInt(epoch1[2]);
-            // System.out.println(d + " " + m + " " + y);
             a = epoch(d, m, y);
             return a;
         }
@@ -54,11 +53,10 @@ public class MyDate {
             int y = Integer.parseInt(epoch1[0]);
             int m = Integer.parseInt(epoch1[1]);
             int d = Integer.parseInt(epoch1[2]);
-            // System.out.println(d + " " + m + " " + y);
             a = epoch(d, m, y);
             return a;
         }
-        return a;
+        return -1;
     }
 
     private Integer epoch(int day, int month, int year) {

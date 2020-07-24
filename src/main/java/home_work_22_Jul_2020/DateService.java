@@ -2,20 +2,14 @@ package home_work_22_Jul_2020;
 
 public class DateService {
 
-    String dateString;
-    MyDate mydate = new MyDate(null);
-    // MyDate mydate2 = new MyDate(null);
+    public int differenceIndDays(MyDate mydate1, MyDate mydate2){
 
-    private int epoch1;
-    private int epoch2;
+        // Get the EPOCH value for each input date
+        int epoch1 = mydate1.verifyDate(mydate1.getDate());
+        int epoch2 = mydate2.verifyDate(mydate2.getDate());
 
-    public int differenceIndDays(String mydate1, String mydate2){
-
-        epoch1 = mydate.verifyDate(mydate1);
-        epoch2 = mydate.verifyDate(mydate2);
-
-        // Our epochs are calculated in hours
-        return (epoch2-epoch1)/24;
+        // My epochs are calculated in hours
+        return (epoch2 - epoch1)/24;
     }
 //    public int differenceYearsDays(MyDate date1, MyDate date2){}
 //    public MyDate differenceYearsDays(MyDate from, int daysToAdd){}
