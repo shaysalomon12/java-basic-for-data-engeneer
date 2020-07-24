@@ -1,7 +1,5 @@
 package home_work_22_Jul_2020;
 
-import java.math.BigInteger;
-
 public class MyDate {
 
     private String date;
