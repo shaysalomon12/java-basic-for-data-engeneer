@@ -9,7 +9,6 @@ public class MyDate {
     private String month;
     private String day;
     private String dateRegex;
-    // private String dateRegex = null;
     private int epoch = 0;
     private Integer a = 0;
 
