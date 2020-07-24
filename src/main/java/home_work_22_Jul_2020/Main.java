@@ -29,7 +29,9 @@ public class Main {
         System.out.println("Difference in days between " + date1.getDate() + " and " + date2.getDate() + " : " + diffInDays);
         JOptionPane.showMessageDialog(null , "Difference in days between " + date1.getDate() + " and " + date2.getDate() + " : \n" + diffInDays);
 
-        // public int differenceIndDays(MyDate date1, MyDate date2){}
+        String differenceYearsDays = ds.differenceYearsDays(date1, date2);
+        JOptionPane.showMessageDialog(null , "Difference in years and days between " + date1.getDate() + " and " + date2.getDate() + " : \n" + differenceYearsDays);
+
         //    public int differenceYearsDays(MyDate date1, MyDate date2){}
         //    public MyDate differenceYearsDays(MyDate from, int daysToAdd){}
     }
