@@ -4,19 +4,23 @@ public class Test {
 
     public static void main(String[] args) {
 
-        /*
-        Epoc1: 17702197
-        Epoc2: 17710962
-         */
 
-        int i = 17710962;
-        int j = 17702197;
-        int k1;
-        int k2;
-        k1 = (j-i)%j;
-        k2 = i%j;
+        // int epoc1 = 17702197; // (07/23/2019)
+        //int epoc1 = 17710962; // (07/23/2020)
+        int epoc1 = 17702507;
 
-        System.out.println(((i-j)/24)%365);
-        System.out.println("i%j is " + k2/24);
+        int epochY =  31556926/3600;
+        int epochM =  2629743/3600;
+        int epochD = 86400/3600;
+
+        int year = epoc1/epochY;
+        int month1 = epoc1%epochY;
+        int month = month1/epochM;
+        int day1 = month1%epochM;
+        int day = day1/epochD;
+
+        System.out.println("Year: " + year);
+        System.out.println("Month: " + month);
+        System.out.println("Day: " + day);
     }
 }

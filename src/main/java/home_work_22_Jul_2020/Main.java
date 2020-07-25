@@ -32,7 +32,9 @@ public class Main {
         String differenceYearsDays = ds.differenceYearsDays(date1, date2);
         JOptionPane.showMessageDialog(null , "Difference in years and days between " + date1.getDate() + " and " + date2.getDate() + " : \n" + differenceYearsDays);
 
-        //    public int differenceYearsDays(MyDate date1, MyDate date2){}
-        //    public MyDate differenceYearsDays(MyDate from, int daysToAdd){}
+        int addDays = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter days to add to date no. 1"));
+        MyDate date3 = ds.differenceYearsDaysAdd(date1, (int) addDays);
+        JOptionPane.showMessageDialog(null , "New date is (format mm/dd/yyyy): \n " + date3.getDate());
+
     }
 }

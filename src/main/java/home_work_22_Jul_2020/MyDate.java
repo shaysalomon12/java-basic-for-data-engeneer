@@ -9,13 +9,16 @@ public class MyDate {
     private String dateRegex;
     private int epoch = 0;
     private Integer a = 0;
+    private final int dayM = (86400/3600);
+    private final int monthM = (2629743/3600);
+    private final int yearM = (31556926/3600);
 
     // Constructor that verifay date end return epoch (number of seconds since 01/01/1970
     public MyDate(String date1) {
         this.date = date1;
     }
 
-    // Verify this is a valid date
+    // Verify this is a valid date. Returns epoch number in hours
     public Integer verifyDate(String date) {
 
         // mm/dd/yyyy format
@@ -58,13 +61,26 @@ public class MyDate {
 
     private Integer epoch(int day, int month, int year) {
         // Calculate "epoch like" - number of hours since 01/01/1970
-        // We divide each number by 3600 to get all number by hours instead of seconds
-        // because int cannot handle such numbers
-        int dayM = (86400/3600);
-        int monthM = (2629743/3600);
-        int yearM = (31556926/3600);
-        // System.out.println("Verify calc: " + dayM + " " + monthM + " " +  yearM);
+        // Used no. of hours to convert date instead of seconds because int cannot handle such numbers
         return ((day * dayM) + (month * monthM) + (year * yearM));
+
+    }
+
+    public String reverseEpoch (int epochNumber){
+        // int epoc1 = 17710962; // (07/23/2020)
+
+        // int epochY =  31556926/3600;
+        // int epochM =  2629743/3600;
+        // int epochD = 86400/3600;
+
+        Integer year = epochNumber/yearM;
+        int month1 = epochNumber%yearM;
+        Integer month = month1/monthM;
+        int day1 = month1%monthM;
+        Integer day = day1/dayM;
+        String a = month.toString() + "/" + day.toString() + "/" + year.toString();
+        System.out.println("New date is " + a);
+        return a;
 
     }
 
