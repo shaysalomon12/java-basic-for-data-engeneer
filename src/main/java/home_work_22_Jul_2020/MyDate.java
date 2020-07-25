@@ -67,11 +67,6 @@ public class MyDate {
     }
 
     public String reverseEpoch(int epochNumber) {
-        // int epoc1 = 17710962; // (07/23/2020)
-
-        // int epochY =  31556926/3600;
-        // int epochM =  2629743/3600;
-        // int epochD = 86400/3600;
 
         Integer year = epochNumber / yearM;
         int month1 = epochNumber % yearM;

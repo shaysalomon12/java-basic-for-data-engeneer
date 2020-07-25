@@ -29,9 +29,6 @@ public class DateService {
         }
 
         int days = (((epoch2 - epoch1) / 24) % 365);
-        System.out.println("Epoc1: " + epoch1);
-        System.out.println("Epoc2: " + epoch2);
-        // System.out.println("Yers: " + years + " Days: " + days);
         return years + " years and " + days + " days";
 
     }
@@ -40,7 +37,6 @@ public class DateService {
         int epoc3 = mydate1.verifyDate(mydate1.getDate());
         epoc3 = epoc3 + (daysToAdd * dayM);
         String a = mydate1.reverseEpoch(epoc3);
-        System.out.println("Epoc3: " + epoc3);
         return new MyDate(a);
     }
 
