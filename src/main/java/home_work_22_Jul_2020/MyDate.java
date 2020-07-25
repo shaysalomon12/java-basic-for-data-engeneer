@@ -78,6 +78,11 @@ public class MyDate {
         Integer month = month1 / monthM;
         int day1 = month1 % monthM;
         Integer day = day1 / dayM;
+
+        if (day == 0){
+            day = day + 1;
+        }
+
         String a = month.toString() + "/" + day.toString() + "/" + year.toString();
         System.out.println("New date is " + a);
         return a;
