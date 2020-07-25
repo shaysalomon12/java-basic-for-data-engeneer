@@ -38,7 +38,6 @@ public class DateService {
 
     public MyDate differenceYearsDaysAdd(MyDate mydate1, int daysToAdd) {
         int epoc3 = mydate1.verifyDate(mydate1.getDate());
-        int dayM = (86400 / 3600);
         epoc3 = epoc3 + (daysToAdd * dayM);
         String a = mydate1.reverseEpoch(epoc3);
         System.out.println("Epoc3: " + epoc3);
