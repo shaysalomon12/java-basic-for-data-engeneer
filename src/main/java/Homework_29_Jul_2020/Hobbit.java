@@ -31,12 +31,9 @@ public class Hobbit implements  Hero{
 
     @Override
     public boolean isAlive() {
-        if (this.power <= 0) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        // Hobbit cannot be killed
+        return true;
+
     }
 
     @Override
