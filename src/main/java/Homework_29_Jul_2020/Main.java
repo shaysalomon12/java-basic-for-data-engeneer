@@ -4,13 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        HeroFactory hf1 = new HeroFactory();
-        HeroFactory hf2 = new HeroFactory();
-
         Hero player1 = new HeroFactory().createHero();
         Hero player2 = new HeroFactory().createHero();
 
+        System.out.println("********* START GAME ************");
+
         GameManager gm = new GameManager();
         gm.fight(player1, player2);
+
+        System.out.println("********* GAME OVER ************");
     }
 }
