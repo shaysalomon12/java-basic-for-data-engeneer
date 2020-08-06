@@ -1,12 +1,6 @@
 package Homework_05_Aug_2020;
 
-import org.reflections.Reflections;
-
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,11 +23,6 @@ public class Clock {
     }
 
     public void modB(){
-        // Using springframework to invoke all "modB" methods in classes implementing Regime interface
-        // System.out.println("Clock is in modB");
-        // for (Regime regime : regimes) {
-        //    regime.modB();
-        //}
         regimes.get(currentRegime).printRegimeName();
         regimes.get(currentRegime).modB();
     }

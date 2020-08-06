@@ -1,10 +1,6 @@
 package Homework_05_Aug_2020;
 
 import javax.swing.*;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.sql.SQLOutput;
-
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import static java.lang.System.*;
