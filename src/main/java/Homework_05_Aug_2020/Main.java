@@ -3,7 +3,6 @@ package Homework_05_Aug_2020;
 import javax.swing.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import static java.lang.System.*;
 /*
 Regime          modA          modB
 ======          ====          ====
