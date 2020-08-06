@@ -8,7 +8,13 @@ import java.sql.SQLOutput;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import static java.lang.System.*;
-
+/*
+Regime          modA          modB
+======          ====          ====
+Clock           Hour          Minutes
+Calender        Year          Day/Month
+Alarm           Hour+Min      Stop Alarm
+ */
 public class Main {
 
     public static void main(String[] args) {
@@ -19,21 +25,23 @@ public class Main {
 
 
         String[] choices = {"modA", "modB", "modC"};
-        String input = null;
+        String input;
 
         do {
             input = (String) JOptionPane.showInputDialog(null, "Choose Clock Mode", "Clock", JOptionPane.QUESTION_MESSAGE, null,
                     choices, // Array of choices
                     choices[0]); // Initial choice
 
-            if (input.equals("modA")) {
-                clock.modA();
-            }
-            else if (input.equals("modB")) {
-                clock.modB();
-            }
-            else if (input.equals("modC")) {
-                clock.modC();
+            switch (input) {
+                case "modA":
+                    clock.modA();
+                    break;
+                case "modB":
+                    clock.modB();
+                    break;
+                case "modC":
+                    clock.modC();
+                    break;
             }
         } while (true);
 
