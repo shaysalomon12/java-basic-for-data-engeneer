@@ -16,5 +16,12 @@ public class Main {
             t.start();
 
         }
+
+        // Keep main running after all threads exited to see it in VisualVM
+        try {
+            Thread.sleep(1000000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
