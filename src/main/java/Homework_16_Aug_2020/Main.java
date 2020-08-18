@@ -1,7 +1,6 @@
-package Homework_16_Jul_2020;
+package Homework_16_Aug_2020;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -28,7 +27,10 @@ public class Main {
         colorList.add ("White");
 
         // Check Occurrences
+        System.out.println("Color Count Occurrences");
         CountUtils.countOccurrences((ArrayList<String>) colorList);
+
+
 
     }
 }
