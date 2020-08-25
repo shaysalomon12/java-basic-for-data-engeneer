@@ -29,4 +29,16 @@ public class ListUtils {
         }
     }
 
+    public static <T> void forEachWithDelay_myOtherInterface(List<T> list, int delay, MyOtherInterface<T> otherinterface) {
+        for (T list1 : list) {
+            String a = otherinterface.run(list1);
+            try {
+                System.out.println("Current color is " + a + ". Delaying " + delay + " milisecs ...");
+                Thread.sleep(delay);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 }

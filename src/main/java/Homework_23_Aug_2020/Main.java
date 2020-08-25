@@ -25,11 +25,14 @@ public class Main {
         // Using Consumer interface
         System.out.println("Using Consumer interface");
         ListUtils.forEachWithDelay_Consumer(colorList, 1000,(a1) -> System.out.println("Current color is " + a1) );
-        //ListUtils.forEachWithDelay_Consumer(colorList, 1000,(a1) -> System.out.println(new StringJoiner("Current color is ").add(a1)));
 
         // Using MyInterface interface
         System.out.println("Using MyInterface interface");
         ListUtils.forEachWithDelay_myInterface(colorList, 300, (a1) -> System.out.println("Current color is " + a1));
+
+        // Using MyOtherInterface interface
+        System.out.println("Using MyOtherInterface interface");
+        ListUtils.forEachWithDelay_myOtherInterface(colorList, 300, (a1) -> {return a1;});
 
     }
 
