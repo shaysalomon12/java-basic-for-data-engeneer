@@ -54,7 +54,7 @@ public class Main {
         }
 
         // Using Consumer interface:  int compare(T o1, T o2);
-        numberList = ListUtils.sortCustomComparator(numberList, (o1, o2) -> (o1.hashCode() - o2.hashCode() ));
+        numberList = ListUtils.sortCustomComparator(numberList, (o1, o2) -> (o1.hashCode() - o2.hashCode()));
 
         System.out.println("\nSorted numberList:");
         for (Integer numbers : numberList) {
