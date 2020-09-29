@@ -38,9 +38,9 @@ public class Main {
                 Customer.builder().first_Name("Ronen").last_Name("Efrati").age(50).build());
 
 
-        stream.map(customer -> new AbstractMap.SimpleEntry<>(customer.getAge(), customer.getFirst_Name()))
+        stream.map(customer -> new AbstractMap.SimpleEntry<>(customer.getAge(), customer.getFirst_Name() + " " + customer.getLast_Name()))
                 .collect(Collectors.groupingBy(AbstractMap.SimpleEntry::getKey))
-                .forEach((age, names) -> System.out.println(age + "=" + names));
+                .forEach((age, firstLast) -> System.out.println(age + "=" + firstLast));
 
     }
 
