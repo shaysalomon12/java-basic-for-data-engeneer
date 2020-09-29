@@ -1,8 +1,6 @@
 package Homework_23_Sep_2020;
 
-import Homework_30_Aug_2020.CustomComparator;
 import lombok.SneakyThrows;
-
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.AbstractMap;
