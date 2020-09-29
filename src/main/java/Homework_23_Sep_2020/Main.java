@@ -17,7 +17,7 @@ public class Main {
     @SneakyThrows
     public static void main(String[] args) {
 
-        // List top common words in Phi Collins In The Air Tonight
+        // List top 5 common words in Phil Collins In The Air Tonight
         Files.lines(Paths.get("c:\\aaa", "\\Phi_Collins_ln_The_Air_Tonight.txt"))
                 .flatMap(Pattern.compile("\\W+")::splitAsStream)
                 .filter(s -> s.length() >= 2)
@@ -29,13 +29,15 @@ public class Main {
                 .limit(5)
                 .forEach(e -> System.out.println(e.getKey() + ": " + e.getValue()));
 
-        // List Age and Customers names
+        System.out.println("===================================");
+
+        // For each Age list Customers names
         Stream<Customer> stream = Stream.of(
                 Customer.builder().first_Name("Moshe").last_Name("Cohen").age(30).build(),
                 Customer.builder().first_Name("Boris").last_Name("Tupkin").age(40).build(),
                 Customer.builder().first_Name("Eli").last_Name("Baruch").age(50).build(),
-                Customer.builder().first_Name("Dudu").last_Name("Dankner").age(60).build(),
-                Customer.builder().first_Name("Ronen").last_Name("Efrati").age(70).build());
+                Customer.builder().first_Name("Dudu").last_Name("Dankner").age(40).build(),
+                Customer.builder().first_Name("Ronen").last_Name("Efrati").age(50).build());
 
 
         stream.map(customer -> new AbstractMap.SimpleEntry<>(customer.getAge(), customer.getFirst_Name()))
