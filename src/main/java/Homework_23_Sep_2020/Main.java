@@ -22,7 +22,7 @@ public class Main {
                 .flatMap(Pattern.compile("\\W+")::splitAsStream)
                 .filter(s -> s.length() >= 2)
                 .map(String::toLowerCase)
-                .collect(Collectors.groupingBy(w->w, Collectors.summingInt(w->1)))
+                .collect(Collectors.groupingBy(a->a, Collectors.summingInt(a->1)))
                 .entrySet()
                 .stream()
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
